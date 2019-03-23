@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 👍 YOUR HTML HERE 👍 -->
+  <div id="herostats">
+    <table id="tablehero" style="width:45%" style display="none">
+      <tr>
+        <th id="heroname"></th> 
+      </tr>
+      <tr>
+        <th id="herohealth"></th> 
+      </tr>
+      <tr>
+        <th id="heroweapon"></th>
+      </tr>
+      <tr>
+        <th id="herodmg"></th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="heroinventory">
+      <table id="inventory" style="width:45%" style display="none">
+        <tr>
+          <th id="currentitem"></th> 
+        </tr>
+        <tr>
+            <th id="currentitemdmg"></th> 
+          </tr>
+      </table>
+    </div>
+
+  <div><img id="inn" src="https://66.media.tumblr.com/1a2a8c82361222daa020e21400bef88d/tumblr_pbr3nbNVtc1xzkabyo1_1280.gif" onclick="rest(hero)" alt="http://media.kotaku.foxtrot.future.net.uk/wp-content/uploads/sites/52/2016/04/htiwfw5na9ueraxxfqnh.gif">
+  </div>
+
+  <div id="tempDiv">
+    <img id="dagger" src="https://thumbs.gfycat.com/OddballBewitchedGourami-size_restricted.gif"  onclick="pickUpItem(hero,daggerLoot)" alt="http://www.thinkgeek.com/images/products/zoom/19a7_diablo_3_sword_of_justice_prop_replica.gif">
+  </div>
+
+  <div><img id="bag" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/53e31121634953.56305ce584056.gif"  onclick="clickBag()" alt="https://media.giphy.com/media/l378xcbxNV5QYfygg/giphy.gif">
+  </div>
+
+
+  <div id="bossInc">
+    <img id="boss" src="http://i.imgur.com/UrjaFxL.gif"  onclick="bossAggro()" alt="https://media.giphy.com/media/nwDYxBopAZWi4/giphy.gif"  style="visibility:hidden">
+  </div>
+
+  <div id="afterMath">
+    <img id="injured" src="https://66.media.tumblr.com/41bebd7421a21bed561423339a830a08/tumblr_oxbz7r1LdE1r88buxo2_250.gif"  alt="http://38.media.tumblr.com/6ee7144fbacd80ed5b8fef6d5841b375/tumblr_nbcwf2s6a51tg1zpzo1_500.gif" style="visibility:hidden">
+  </div> 
+
+  <button type="button" id="rename" onclick="renameHero()">Rename your hero</button>
+
+  <button type="button" id="statsbutton" onclick="displayStats()">Toggle Herostats</button>
+
+  <button type="button" id="bagbutton" onclick="displayInventory()">Toggle Inventory</button>
+
+  <button type="button" id="summonboss" onclick="summonBossStart()">Summon boss</button>
+
+  <button type="button" id="superweapon" onclick="equipLightSabre()">Equip lightsabre</button>
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>

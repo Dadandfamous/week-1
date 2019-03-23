@@ -1,0 +1,24 @@
+/* Sorry about the background. The page looked so empty. */
+body {
+  background-image: url("https://images4.alphacoders.com/220/thumb-1920-220564.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+img {
+width: 110px;
+height: 110px;
+padding: 3px;
+}
+
+#tablehero {
+  text-align: left;
+  padding: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#inventory {
+  text-align: left;
+  padding: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
